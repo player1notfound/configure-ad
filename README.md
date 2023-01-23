@@ -22,12 +22,6 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
-
-- Step 1
-- Step 2
-- Step 3
-- Step 4
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -35,7 +29,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create two virtual machines, Domain Controller and Client-1. Set Domain Controller IP to static. This enables the Client-1 to receive Active Directory services and permission to join Domain. Check connectivity between Domain Controller and Client-1 by enabling all ICMPv4 traffic in the local windows firewall of the Domain Controller and utilizing Command prompt in Client-1 and ping -t 10.3.0.4. 
 </p>
 <br />
 
@@ -43,7 +37,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Install Active Directory Users & Computers. Next, promote the Virtual Machines to Domain Controller and enable all Active Domain Services. Create a new forest, "mydomain.com," and reboot the computer. Log into Domain Controller with the username "mydomain.com//labuser."
 </p>
 <br />
 
@@ -51,6 +45,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create two Orgazational Units named _EMPLOYEES and _ADMIN by right clicking on the domain area = New = Organizational Unit and complete the application. Select New and select user and fill out the information for the new user. In this case, let's use Jane Doe as an example. She is the admin and thus her username is Jane_Admin. Add her to the Domain admins security group. This is the administrator account. 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Join Client-1 to the domain, "mydomain.com," from the Azure portal. Change Client-1's DNS settings to the Domain Controller's private IP address. Restart Client-1 in the Azure portal. Go to settings = About = Rename this PC to change the domain. Complete the credentials from mydomain.com/labuser. Client-1 became a composing part of mydomain.com. Log into Client-1 = Open system properties = Remote Desktop. Permit domain users access to remote desktop. Non-administrative users possess remote desktop on Client-1. 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Input the script into Powershell which produce users into the Domain. Choose one of the users and Remore Desktop Protocal into Client-1. The Powershell script generated a user "bab.hubo," which authorize consent into Client-1 with his credentials as an ordinary user. 
 </p>
 <br />
