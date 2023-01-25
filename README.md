@@ -58,7 +58,7 @@ Join Client-1 to the domain, "mydomain.com," from the Azure portal. Change Clien
 <br />
 
 <p>
-<img src="https://i.imgur.io/JEV3mA2_d.webp?maxwidth=640&shape=thumb&fidelity=medium" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.io/r9pI2Ru_d.webp?maxwidth=640&shape=thumb&fidelity=medium" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Input the script into Powershell which produce users into the Domain. Choose one of the users and Remore Desktop Protocal into Client-1. The Powershell script generated a user "bab.hubo," which authorize consent into Client-1 with his credentials as an ordinary user. 
