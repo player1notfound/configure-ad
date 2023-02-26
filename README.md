@@ -6,9 +6,6 @@
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
 
 <h2>Environments and Technologies Used</h2>
 
@@ -45,7 +42,7 @@ Install Active Directory Users & Computers. Next, promote the Virtual Machines t
 <img src="https://i.imgur.io/yohm1zt_d.webp?maxwidth=640&shape=thumb&fidelity=medium" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Create two Orgazational Units named _EMPLOYEES and _ADMIN by right clicking on the domain area = New = Organizational Unit and complete the application. Select New and select user and fill out the information for the new user. In this case, let's use Jane Doe as an example. She is the admin and thus her username is Jane_Admin. Add her to the Domain admins security group. This is the administrator account. 
+Create two Orgazational Units named _EMPLOYEES and _ADMIN by right clicking on the domain area → New → Organizational Unit and complete the application. Select New and select user and fill out the information for the new user. In this case, let's use Jane Doe as an example. She is the admin and thus her username is Jane_Admin. Add her to the Domain admins security group. This is the administrator account. 
 </p>
 <br />
 
