@@ -31,7 +31,7 @@ Create two virtual machines, Domain Controller and Client-1. Set Domain Controll
 <br />
 
 <p>
-<img src="https://i.imgur.io/HXvaJgU_d.webp?maxwidth=640&shape=thumb&fidelity=medium" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/NpZucWw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Install Active Directory Users & Computers. Next, promote the Virtual Machines to Domain Controller and enable all Active Domain Services. Create a new forest, "mydomain.com," and reboot the computer. Log into Domain Controller with the username "mydomain.com//labuser."
